@@ -21,6 +21,7 @@
 		77E73EA925A5CE4F00B64729 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73EA825A5CE4F00B64729 /* UIStackView+Extension.swift */; };
 		77E73EAD25A5D1C200B64729 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73EAC25A5D1C200B64729 /* SignUpViewController.swift */; };
 		77E73EB025A5D67600B64729 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73EAF25A5D67600B64729 /* OneLineTextField.swift */; };
+		77E73EB625A5F97300B64729 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73EB525A5F97300B64729 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		77E73EA825A5CE4F00B64729 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		77E73EAC25A5D1C200B64729 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		77E73EAF25A5D67600B64729 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		77E73EB525A5F97300B64729 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				77E73E8E25A48A9100B64729 /* App */,
 				771B029325A46D5F008B8DCC /* AuthViewController.swift */,
 				77E73EAC25A5D1C200B64729 /* SignUpViewController.swift */,
+				77E73EB525A5F97300B64729 /* LoginViewController.swift */,
 				77E73EB225A5D67B00B64729 /* CustomViews */,
 				77E73E9725A48F0900B64729 /* Extensions */,
 				771B029825A46D60008B8DCC /* Assets.xcassets */,
@@ -203,6 +206,7 @@
 				771B029025A46D5F008B8DCC /* AppDelegate.swift in Sources */,
 				77E73E9525A48EFC00B64729 /* UIFont+Extension.swift in Sources */,
 				771B029225A46D5F008B8DCC /* SceneDelegate.swift in Sources */,
+				77E73EB625A5F97300B64729 /* LoginViewController.swift in Sources */,
 				77E73EA925A5CE4F00B64729 /* UIStackView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
