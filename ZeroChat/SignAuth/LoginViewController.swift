@@ -36,11 +36,13 @@ class LoginViewController: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = .white
         scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: UIScreen.main.bounds.height * 1.2)
+        scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        googleButton.customizeGoogleButton()
         setupContstaints()
     }
 }
@@ -96,7 +98,7 @@ extension LoginViewController {
         
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 10),
+            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 30),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: screenWidth * 0.025),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -screenWidth * 0.025),
         ])
