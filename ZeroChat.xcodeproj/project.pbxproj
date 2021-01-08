@@ -19,6 +19,8 @@
 		7722C74725A8C0F200CEA30C /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7722C74625A8C0F200CEA30C /* Bundle+Extension.swift */; };
 		7722C75325A8C25800CEA30C /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 7722C75125A8C25800CEA30C /* activeChats.json */; };
 		7722C75425A8C25800CEA30C /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 7722C75225A8C25800CEA30C /* waitingChats.json */; };
+		7722C75725A8E3AD00CEA30C /* ActiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7722C75625A8E3AD00CEA30C /* ActiveCell.swift */; };
+		7722C75C25A8E4DE00CEA30C /* Protocol+SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7722C75B25A8E4DE00CEA30C /* Protocol+SelfConfiguringCell.swift */; };
 		77E73E9225A48BE000B64729 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73E9125A48BE000B64729 /* UIButton+Extension.swift */; };
 		77E73E9525A48EFC00B64729 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73E9425A48EFC00B64729 /* UIFont+Extension.swift */; };
 		77E73E9B25A48FE800B64729 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73E9A25A48FE800B64729 /* UIColor.swift */; };
@@ -48,6 +50,8 @@
 		7722C74625A8C0F200CEA30C /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		7722C75125A8C25800CEA30C /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		7722C75225A8C25800CEA30C /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		7722C75625A8E3AD00CEA30C /* ActiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCell.swift; sourceTree = "<group>"; };
+		7722C75B25A8E4DE00CEA30C /* Protocol+SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocol+SelfConfiguringCell.swift"; sourceTree = "<group>"; };
 		77E73E9125A48BE000B64729 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		77E73E9425A48EFC00B64729 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		77E73E9A25A48FE800B64729 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -151,6 +155,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7722C75925A8E3B200CEA30C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7722C75625A8E3AD00CEA30C /* ActiveCell.swift */,
+				7722C75B25A8E4DE00CEA30C /* Protocol+SelfConfiguringCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		77E73E8E25A48A9100B64729 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 				77E73EAF25A5D67600B64729 /* OneLineTextField.swift */,
 				77E73EA525A5C53E00B64729 /* ButtonFormView.swift */,
 				77E73EBB25A61D6200B64729 /* AddPhotoView.swift */,
+				7722C75925A8E3B200CEA30C /* Cell */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -264,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7722C75725A8E3AD00CEA30C /* ActiveCell.swift in Sources */,
 				7722C73825A8580700CEA30C /* ListViewController.swift in Sources */,
 				7722C73525A63E3A00CEA30C /* UISegmentedControl+Extension.swift in Sources */,
 				7722C73F25A85AB700CEA30C /* MainTabBarController.swift in Sources */,
@@ -279,6 +294,7 @@
 				77E73EBC25A61D6200B64729 /* AddPhotoView.swift in Sources */,
 				77E73E9225A48BE000B64729 /* UIButton+Extension.swift in Sources */,
 				77E73E9E25A492BE00B64729 /* UILabel+Extension.swift in Sources */,
+				7722C75C25A8E4DE00CEA30C /* Protocol+SelfConfiguringCell.swift in Sources */,
 				771B029025A46D5F008B8DCC /* AppDelegate.swift in Sources */,
 				77E73E9525A48EFC00B64729 /* UIFont+Extension.swift in Sources */,
 				771B029225A46D5F008B8DCC /* SceneDelegate.swift in Sources */,
