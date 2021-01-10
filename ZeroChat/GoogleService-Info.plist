@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>833032355936-ouatvtks6qlkmitmp0unnsbjtdto4uqe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.833032355936-ouatvtks6qlkmitmp0unnsbjtdto4uqe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0vXGT_xAEIy2_KpwAuuXJciZi1QfuN3A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>833032355936</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SwiftViktor.ZeroChat</string>
+	<key>PROJECT_ID</key>
+	<string>zerochat-3af90</string>
+	<key>STORAGE_BUCKET</key>
+	<string>zerochat-3af90.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:833032355936:ios:c6b522de9c9612fe050305</string>
+</dict>
+</plist>
