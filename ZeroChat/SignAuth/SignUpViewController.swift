@@ -29,23 +29,33 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupContstaints()
         
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     @objc private func signUpButtonTapped() {
         AuthService.shared.register(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text) { (result) in
             switch result {
             case .success(let user):
-                self.showAlert(with: "Well Done!", and: "You are register in ZeroChat")
-                print(user.email)
+                self.showAlert(with: "Well Done!", and: "You are register in ZeroChat") {
+                    self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
+                }
             case .failure(let error):
                 self.showAlert(with: "Error!", and: error.localizedDescription)
             }
+        }	
+    }
+    
+    @objc private func loginButtonTapped() {
+        self.dismiss(animated: true) {
+            self.delegate?.toLoginVC()
         }
     }
 }
@@ -91,7 +101,7 @@ extension SignUpViewController {
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: screenWidth * 0.025),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -screenWidth * 0.025),
         ])
-
+        
     }
 }
 

@@ -29,4 +29,16 @@ class Validators {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regEx)
         return predicate.evaluate(with: text)
     }
+    
+    static func isFilled(username: String?, description: String?, gender: String?) -> Bool {
+        guard let description = description,
+              let gender = gender,
+              let username = username,
+              description != "",
+              gender != "",
+              username != "" else {
+            return false
+        }
+        return true
+    }
 }

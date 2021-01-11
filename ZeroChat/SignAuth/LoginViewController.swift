@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class LoginViewController: UIViewController {
     let screensize: CGRect = UIScreen.main.bounds
     
@@ -31,6 +30,8 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigationDelegate?
+    
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView(frame: UIScreen.main.bounds)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,17 +48,24 @@ class LoginViewController: UIViewController {
         setupContstaints()
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonTapped() {
         AuthService.shared.login(email: emailTextField.text, password: passwordTextField.text) { (result) in
             switch result {
-            case .success(let user):
+            case .success(_ ):
                 self.showAlert(with: "Well Done!", and: "You are logged in ZeroChat")
-                print(user)
+                self.present(MainTabBarController(), animated: true, completion: nil)
             case .failure(let error):
                 self.showAlert(with: "Error!", and: error.localizedDescription)
             }
+        }
+    }
+    
+    @objc private func signUpButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
         }
     }
 }
