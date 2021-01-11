@@ -31,6 +31,9 @@
 		778A5FD925A9FDDC00F6DAFC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5FD825A9FDDC00F6DAFC /* UserCell.swift */; };
 		778A5FDC25A9FF8D00F6DAFC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5FDB25A9FF8D00F6DAFC /* UIViewController+Extension.swift */; };
 		778A5FE125AA26A300F6DAFC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5FE025AA26A300F6DAFC /* ProfileViewController.swift */; };
+		77A5D65725AC4D590017ED8A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A5D65625AC4D590017ED8A /* AuthService.swift */; };
+		77C310CA25AC72B4008ECDA5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310C925AC72B4008ECDA5 /* Validators.swift */; };
+		77C310CD25AC74C9008ECDA5 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310CC25AC74C9008ECDA5 /* AuthError.swift */; };
 		77C4666C25AAFBAD00C9A0B3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4666B25AAFBAD00C9A0B3 /* UIView+Extension.swift */; };
 		77C4667025AB4E3A00C9A0B3 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4666F25AB4E3A00C9A0B3 /* ChatRequestViewController.swift */; };
 		77C4667425AB5B4100C9A0B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77C4667325AB5B4100C9A0B3 /* GoogleService-Info.plist */; };
@@ -77,6 +80,9 @@
 		778A5FD825A9FDDC00F6DAFC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		778A5FDB25A9FF8D00F6DAFC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		778A5FE025AA26A300F6DAFC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		77A5D65625AC4D590017ED8A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		77C310C925AC72B4008ECDA5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		77C310CC25AC74C9008ECDA5 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		77C4666B25AAFBAD00C9A0B3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		77C4666F25AB4E3A00C9A0B3 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		77C4667325AB5B4100C9A0B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -129,7 +135,8 @@
 				771B029D25A46D60008B8DCC /* Info.plist */,
 				77C4667325AB5B4100C9A0B3 /* GoogleService-Info.plist */,
 				77E73E8E25A48A9100B64729 /* App */,
-				778A5FD125A9CFE400F6DAFC /* Model */,
+				77A5D65425AC4D1B0017ED8A /* Services */,
+				778A5FD125A9CFE400F6DAFC /* Models */,
 				7722C73A25A859CE00CEA30C /* SignAuth */,
 				7722C73C25A85A9000CEA30C /* Controllers */,
 				776E777A25A9AD430047C971 /* Protocols */,
@@ -217,13 +224,23 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		778A5FD125A9CFE400F6DAFC /* Model */ = {
+		778A5FD125A9CFE400F6DAFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				778A5FD225A9D00400F6DAFC /* MUser.swift */,
 				778A5FD525A9D06800F6DAFC /* MChat.swift */,
+				77C310CC25AC74C9008ECDA5 /* AuthError.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		77A5D65425AC4D1B0017ED8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				77A5D65625AC4D590017ED8A /* AuthService.swift */,
+				77C310C925AC72B4008ECDA5 /* Validators.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		77E73E8E25A48A9100B64729 /* App */ = {
@@ -360,8 +377,10 @@
 				778A5FC925A9BA1A00F6DAFC /* SectionHeader.swift in Sources */,
 				778A5FDC25A9FF8D00F6DAFC /* UIViewController+Extension.swift in Sources */,
 				7722C73825A8580700CEA30C /* ListViewController.swift in Sources */,
+				77C310CD25AC74C9008ECDA5 /* AuthError.swift in Sources */,
 				7722C73525A63E3A00CEA30C /* UISegmentedControl+Extension.swift in Sources */,
 				7722C73F25A85AB700CEA30C /* MainTabBarController.swift in Sources */,
+				77C310CA25AC72B4008ECDA5 /* Validators.swift in Sources */,
 				778A5FD325A9D00400F6DAFC /* MUser.swift in Sources */,
 				77E73EB025A5D67600B64729 /* OneLineTextField.swift in Sources */,
 				77412B3425AAF634005A5971 /* InsertableTextField.swift in Sources */,
@@ -385,6 +404,7 @@
 				776E777825A9AC480047C971 /* WaitingChatCell.swift in Sources */,
 				77E73E9525A48EFC00B64729 /* UIFont+Extension.swift in Sources */,
 				771B029225A46D5F008B8DCC /* SceneDelegate.swift in Sources */,
+				77A5D65725AC4D590017ED8A /* AuthService.swift in Sources */,
 				77E73EB625A5F97300B64729 /* LoginViewController.swift in Sources */,
 				77E73EA925A5CE4F00B64729 /* UIStackView+Extension.swift in Sources */,
 			);
