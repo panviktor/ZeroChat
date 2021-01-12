@@ -161,7 +161,6 @@
 				77E73EAC25A5D1C200B64729 /* SignUpViewController.swift */,
 				77E73EB525A5F97300B64729 /* LoginViewController.swift */,
 				77E73EB825A6199900B64729 /* SetupProfileViewController.swift */,
-				77C4666F25AB4E3A00C9A0B3 /* ChatRequestViewController.swift */,
 			);
 			path = SignAuth;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 				7722C74125A85B4400CEA30C /* PeopleViewController.swift */,
 				7722C73725A8580700CEA30C /* ListViewController.swift */,
 				778A5FE025AA26A300F6DAFC /* ProfileViewController.swift */,
+				77C4666F25AB4E3A00C9A0B3 /* ChatRequestViewController.swift */,
 				77E73EB225A5D67B00B64729 /* CustomViews */,
 			);
 			path = Controllers;

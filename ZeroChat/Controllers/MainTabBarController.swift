@@ -8,20 +8,34 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+    
+    private let currentUser: MUser
+    
+    init(currentUser: MUser = MUser(username: "frfer",
+                                    email: "fr",
+                                    avatarStringURL: "fer",
+                                    description: "fre",
+                                    gender: "ewr",
+                                    id: "fregtr")) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let listViewController = ListViewController()
-        let peopleViewControler = PeopleViewController()
+        let listViewController = ListViewController(currentUser: currentUser)
+        let peopleViewController = PeopleViewController(currentUser: currentUser)
         
-        let boldConfig =  UIImage.SymbolConfiguration(weight: .medium)
-        tabBar.tintColor = #colorLiteral(red: 0.5568627451, green: 0.3529411765, blue: 0.968627451, alpha: 1)
-        let conversationImage = UIImage(systemName: "bubble.left.and.bubble.right", withConfiguration: boldConfig)!
+        tabBar.tintColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        let boldConfig = UIImage.SymbolConfiguration(weight: .medium)
+        let convImage = UIImage(systemName: "bubble.left.and.bubble.right", withConfiguration: boldConfig)!
         let peopleImage = UIImage(systemName: "person.2", withConfiguration: boldConfig)!
         
         viewControllers = [
-            generateNavigationController(rootViewController: peopleViewControler, title: "People", image: peopleImage),
-            generateNavigationController(rootViewController: listViewController, title: "Conversations", image: conversationImage),
+            generateNavigationController(rootViewController: peopleViewController, title: "People", image: peopleImage),
+            generateNavigationController(rootViewController: listViewController, title: "Conversations", image: convImage)
+            
         ]
     }
     
@@ -30,5 +44,9 @@ class MainTabBarController: UITabBarController {
         navigationVC.tabBarItem.title = title
         navigationVC.tabBarItem.image = image
         return navigationVC
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
