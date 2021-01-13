@@ -10,6 +10,7 @@ import Firebase
 import FirebaseFirestore
 
 class FirestoreService {
+    
     static let shared = FirestoreService()
     
     let db = Firestore.firestore()
@@ -33,9 +34,9 @@ class FirestoreService {
         }
     }
     
-    func saveProfileWith(id: String, email: String, username: String?, avatarImageString: String?,
-                         description: String?, gender: String?, completion: @escaping (Result<MUser, Error>) -> Void) {
-        guard Validators.isFilled(username: username, description: description, gender: gender) else {
+    func saveProfileWith(id: String, email: String, username: String?, avatarImageString: String?, description: String?, sex: String?, completion: @escaping (Result<MUser, Error>) -> Void) {
+        
+        guard Validators.isFilled(username: username, description: description, sex: sex) else {
             completion(.failure(UserError.notFilled))
             return
         }
@@ -44,7 +45,7 @@ class FirestoreService {
                           email: email,
                           avatarStringURL: "not exist",
                           description: description!,
-                          gender: gender!,
+                          sex: sex!,
                           id: id)
         self.usersRef.document(muser.id).setData(muser.representation) { (error) in
             if let error = error {
@@ -55,3 +56,4 @@ class FirestoreService {
         }
     }
 }
+

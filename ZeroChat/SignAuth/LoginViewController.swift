@@ -8,9 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     let welcomeLabel = UILabel(text: "Welcome back!", font: .avenir26())
-    
     let loginWithLabel = UILabel(text: "Login with")
     let orLabel = UILabel(text: "or")
     let emailLabel = UILabel(text: "Email")

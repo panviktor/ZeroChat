@@ -11,12 +11,12 @@ class MainTabBarController: UITabBarController {
     
     private let currentUser: MUser
     
-    init(currentUser: MUser = MUser(username: "frfer",
-                                    email: "fr",
-                                    avatarStringURL: "fer",
-                                    description: "fre",
-                                    gender: "ewr",
-                                    id: "fregtr")) {
+    init(currentUser: MUser = MUser(username: "foo",
+                                    email: "bar",
+                                    avatarStringURL: "foo",
+                                    description: "bar",
+                                    sex: "foo",
+                                    id: "bar")) {
         self.currentUser = currentUser
         super.init(nibName: nil, bundle: nil)
     }

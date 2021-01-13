@@ -16,11 +16,11 @@ class SetupProfileViewController: UIViewController {
     
     let fullNameLabel = UILabel(text: "Full name")
     let aboutmeLabel = UILabel(text: "About me")
-    let genderLabel = UILabel(text: "Sex")
+    let sexLabel = UILabel(text: "Sex")
     
     let fullNameTextField = OneLineTextField(font: .avenir20())
     let aboutMeTextField = OneLineTextField(font: .avenir20())
-    let genderSegmentedControl = UISegmentedControl(first: "Male", second: "Femail", third: "Other")
+    let sexSegmentedControl = UISegmentedControl(first: "Male", second: "Femail")
     
     let goToChatsButton = UIButton(title: "Go to chats!", titleColor: .white, backgroundColor: .buttonDark, isShadow: true, cornerRadius: 4)
     
@@ -50,7 +50,7 @@ class SetupProfileViewController: UIViewController {
             username: fullNameTextField.text,
             avatarImageString: "nil",
             description: aboutMeTextField.text,
-            gender: genderSegmentedControl.titleForSegment(at: genderSegmentedControl.selectedSegmentIndex)) { (result) in
+            sex: sexSegmentedControl.titleForSegment(at: sexSegmentedControl.selectedSegmentIndex)) { (result) in
                 switch result {
                 case .success(let muser):
                     self.showAlert(with: "Успешно!", and: "Данные сохранены!", completion: {
@@ -74,7 +74,7 @@ extension SetupProfileViewController {
         let aboutMeStackView = UIStackView(arrangedSubviews: [aboutmeLabel, aboutMeTextField],
         axis: .vertical,
         spacing: 0)
-        let sexStackView = UIStackView(arrangedSubviews: [genderLabel, genderSegmentedControl],
+        let sexStackView = UIStackView(arrangedSubviews: [sexLabel, sexSegmentedControl],
         axis: .vertical,
         spacing: 12)
         

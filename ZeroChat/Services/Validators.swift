@@ -30,12 +30,12 @@ class Validators {
         return predicate.evaluate(with: text)
     }
     
-    static func isFilled(username: String?, description: String?, gender: String?) -> Bool {
+    static func isFilled(username: String?, description: String?, sex: String?) -> Bool {
         guard let description = description,
-              let gender = gender,
+              let sex = sex,
               let username = username,
               description != "",
-              gender != "",
+              sex != "",
               username != "" else {
             return false
         }
