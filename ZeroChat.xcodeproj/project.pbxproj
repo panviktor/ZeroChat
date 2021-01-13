@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		7722C75725A8E3AD00CEA30C /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7722C75625A8E3AD00CEA30C /* ActiveChatCell.swift */; };
 		7722C75C25A8E4DE00CEA30C /* SelfConfiguringCell+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7722C75B25A8E4DE00CEA30C /* SelfConfiguringCell+Protocol.swift */; };
 		7732C39525A998F70088D712 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7732C39425A998F70088D712 /* GradientView.swift */; };
+		773463C925AF8F6200D887A3 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773463C825AF8F6200D887A3 /* UIApplication+Extension.swift */; };
 		77412B3425AAF634005A5971 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77412B3325AAF634005A5971 /* InsertableTextField.swift */; };
 		776E777825A9AC480047C971 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E777725A9AC480047C971 /* WaitingChatCell.swift */; };
 		778A5FC925A9BA1A00F6DAFC /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5FC825A9BA1A00F6DAFC /* SectionHeader.swift */; };
@@ -36,9 +37,6 @@
 		77C310CD25AC74C9008ECDA5 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310CC25AC74C9008ECDA5 /* AuthError.swift */; };
 		77C310D825ACAA55008ECDA5 /* AuthNavigationDelegate+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310D725ACAA55008ECDA5 /* AuthNavigationDelegate+Protocol.swift */; };
 		77C310DB25ACAD09008ECDA5 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310DA25ACAD09008ECDA5 /* FirestoreService.swift */; };
-		77C310DF25ACAE93008ECDA5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 77C310DE25ACAE93008ECDA5 /* FirebaseAnalytics */; };
-		77C310E125ACAE93008ECDA5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 77C310E025ACAE93008ECDA5 /* FirebaseAuth */; };
-		77C310E325ACAE93008ECDA5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 77C310E225ACAE93008ECDA5 /* FirebaseFirestore */; };
 		77C310E625ACB085008ECDA5 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310E525ACB085008ECDA5 /* UserError.swift */; };
 		77C4666C25AAFBAD00C9A0B3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4666B25AAFBAD00C9A0B3 /* UIView+Extension.swift */; };
 		77C4667025AB4E3A00C9A0B3 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4666F25AB4E3A00C9A0B3 /* ChatRequestViewController.swift */; };
@@ -55,6 +53,7 @@
 		77E73EB625A5F97300B64729 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73EB525A5F97300B64729 /* LoginViewController.swift */; };
 		77E73EB925A6199900B64729 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73EB825A6199900B64729 /* SetupProfileViewController.swift */; };
 		77E73EBC25A61D6200B64729 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E73EBB25A61D6200B64729 /* AddPhotoView.swift */; };
+		B9760C33BE87B7996F1E35AE /* Pods_ZeroChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC1FDDBF720E23BAE941435 /* Pods_ZeroChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +74,7 @@
 		7722C75625A8E3AD00CEA30C /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		7722C75B25A8E4DE00CEA30C /* SelfConfiguringCell+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelfConfiguringCell+Protocol.swift"; sourceTree = "<group>"; };
 		7732C39425A998F70088D712 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		773463C825AF8F6200D887A3 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		77412B3325AAF634005A5971 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		776E777725A9AC480047C971 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		778A5FC825A9BA1A00F6DAFC /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
@@ -105,6 +105,9 @@
 		77E73EB525A5F97300B64729 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77E73EB825A6199900B64729 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		77E73EBB25A61D6200B64729 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		7AC1FDDBF720E23BAE941435 /* Pods_ZeroChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZeroChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2BE094274B803D77D6734A /* Pods-ZeroChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroChat.release.xcconfig"; path = "Target Support Files/Pods-ZeroChat/Pods-ZeroChat.release.xcconfig"; sourceTree = "<group>"; };
+		A5EE14ECB16537CF99B56B67 /* Pods-ZeroChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroChat.debug.xcconfig"; path = "Target Support Files/Pods-ZeroChat/Pods-ZeroChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77C310DF25ACAE93008ECDA5 /* FirebaseAnalytics in Frameworks */,
-				77C310E125ACAE93008ECDA5 /* FirebaseAuth in Frameworks */,
-				77C310E325ACAE93008ECDA5 /* FirebaseFirestore in Frameworks */,
+				B9760C33BE87B7996F1E35AE /* Pods_ZeroChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +127,8 @@
 			children = (
 				771B028E25A46D5F008B8DCC /* ZeroChat */,
 				771B028D25A46D5F008B8DCC /* Products */,
+				FCF4E8CBFB5FC7CFAE5F8DF0 /* Pods */,
+				BB9656064C2780F25D8F1EC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,6 +295,7 @@
 				7722C73425A63E3A00CEA30C /* UISegmentedControl+Extension.swift */,
 				778A5FDB25A9FF8D00F6DAFC /* UIViewController+Extension.swift */,
 				77C4666B25AAFBAD00C9A0B3 /* UIView+Extension.swift */,
+				773463C825AF8F6200D887A3 /* UIApplication+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -310,6 +314,23 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		BB9656064C2780F25D8F1EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AC1FDDBF720E23BAE941435 /* Pods_ZeroChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCF4E8CBFB5FC7CFAE5F8DF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE14ECB16537CF99B56B67 /* Pods-ZeroChat.debug.xcconfig */,
+				8C2BE094274B803D77D6734A /* Pods-ZeroChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,20 +338,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 771B02A025A46D60008B8DCC /* Build configuration list for PBXNativeTarget "ZeroChat" */;
 			buildPhases = (
+				46B9323266449B5E51058D0D /* [CP] Check Pods Manifest.lock */,
 				771B028825A46D5F008B8DCC /* Sources */,
 				771B028925A46D5F008B8DCC /* Frameworks */,
 				771B028A25A46D5F008B8DCC /* Resources */,
+				CE3B11481605A56A0E1FB855 /* [CP] Embed Pods Frameworks */,
+				824E8665DF258CB571306E62 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ZeroChat;
-			packageProductDependencies = (
-				77C310DE25ACAE93008ECDA5 /* FirebaseAnalytics */,
-				77C310E025ACAE93008ECDA5 /* FirebaseAuth */,
-				77C310E225ACAE93008ECDA5 /* FirebaseFirestore */,
-			);
 			productName = ZeroChat;
 			productReference = 771B028C25A46D5F008B8DCC /* ZeroChat.app */;
 			productType = "com.apple.product-type.application";
@@ -358,9 +377,6 @@
 				Base,
 			);
 			mainGroup = 771B028325A46D5F008B8DCC;
-			packageReferences = (
-				77C310DD25ACAE93008ECDA5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 771B028D25A46D5F008B8DCC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,6 +402,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46B9323266449B5E51058D0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeroChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		824E8665DF258CB571306E62 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroChat/Pods-ZeroChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroChat/Pods-ZeroChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeroChat/Pods-ZeroChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE3B11481605A56A0E1FB855 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroChat/Pods-ZeroChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZeroChat/Pods-ZeroChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZeroChat/Pods-ZeroChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		771B028825A46D5F008B8DCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -409,6 +484,7 @@
 				77C310DB25ACAD09008ECDA5 /* FirestoreService.swift in Sources */,
 				778A5FE125AA26A300F6DAFC /* ProfileViewController.swift in Sources */,
 				771B029425A46D5F008B8DCC /* AuthViewController.swift in Sources */,
+				773463C925AF8F6200D887A3 /* UIApplication+Extension.swift in Sources */,
 				77C4667025AB4E3A00C9A0B3 /* ChatRequestViewController.swift in Sources */,
 				77E73E9B25A48FE800B64729 /* UIColor.swift in Sources */,
 				77E73EB925A6199900B64729 /* SetupProfileViewController.swift in Sources */,
@@ -565,6 +641,7 @@
 		};
 		771B02A125A46D60008B8DCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5EE14ECB16537CF99B56B67 /* Pods-ZeroChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -585,6 +662,7 @@
 		};
 		771B02A225A46D60008B8DCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C2BE094274B803D77D6734A /* Pods-ZeroChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -625,35 +703,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		77C310DD25ACAE93008ECDA5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.3.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		77C310DE25ACAE93008ECDA5 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 77C310DD25ACAE93008ECDA5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		77C310E025ACAE93008ECDA5 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 77C310DD25ACAE93008ECDA5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		77C310E225ACAE93008ECDA5 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 77C310DD25ACAE93008ECDA5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 771B028425A46D5F008B8DCC /* Project object */;
 }

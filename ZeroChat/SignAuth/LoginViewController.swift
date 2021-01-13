@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     let welcomeLabel = UILabel(text: "Welcome back!", font: .avenir26())
@@ -38,6 +39,7 @@ class LoginViewController: UIViewController {
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        googleButton.addTarget(self, action: #selector(googleButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonTapped() {
@@ -69,6 +71,12 @@ class LoginViewController: UIViewController {
             self.delegate?.toSignUpVC()
         }
     }
+    
+    @objc private func googleButtonTapped() {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
 }
 
 // MARK: - Setup constraints
