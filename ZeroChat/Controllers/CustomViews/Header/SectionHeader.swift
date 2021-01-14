@@ -9,7 +9,7 @@ import UIKit
 
 class SectionHeader: UICollectionReusableView {
     
-    static let reuseID = "SectionHeader"
+    static let reuseId = "SectionHeader"
     
     let title = UILabel()
     

@@ -70,7 +70,7 @@ struct InsertableTextFieldProvider: PreviewProvider {
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        let viewController = ProfileViewController()
+        let viewController = ProfileViewController(user: MUser(username: "Name", email: "email", avatarStringURL: "", description: "description", sex: "women", id: "1234123123"))
         func makeUIViewController(context: Context) -> ProfileViewController { return viewController }
         func updateUIViewController(_ uiViewController: ProfileViewController, context: Context) {}
     }
