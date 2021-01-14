@@ -5,7 +5,7 @@
 //  Created by Viktor on 09.01.2021.
 //
 
-import Foundation
+import UIKit
 import FirebaseFirestore
 
 struct MUser: Hashable, Decodable {
@@ -27,6 +27,23 @@ struct MUser: Hashable, Decodable {
     
     init?(document: DocumentSnapshot) {
         guard let data = document.data() else { return nil}
+        guard let username = data["username"] as? String,
+              let email = data["email"] as? String,
+              let avatarStringURL = data["avatarStringURL"] as? String,
+              let description = data["description"] as? String,
+              let sex = data["sex"] as? String,
+              let id = data["uid"] as? String else { return nil }
+        
+        self.username = username
+        self.email = email
+        self.avatarStringURL = avatarStringURL
+        self.description = description
+        self.sex = sex
+        self.id = id
+    }
+    
+    init?(document: QueryDocumentSnapshot) {
+        let data = document.data()
         guard let username = data["username"] as? String,
               let email = data["email"] as? String,
               let avatarStringURL = data["avatarStringURL"] as? String,
@@ -67,4 +84,3 @@ struct MUser: Hashable, Decodable {
         return username.lowercased().contains(lowercasedFilter)
     }
 }
-

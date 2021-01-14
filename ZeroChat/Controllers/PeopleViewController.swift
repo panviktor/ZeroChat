@@ -7,11 +7,12 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class PeopleViewController: UIViewController {
+    var users = [MUser]()
+    private var userListener: ListenerRegistration?
     
-    //    let users = Bundle.main.decode([MUser].self, from: "users.json")
-    let users = [MUser]()
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, MUser>!
     
@@ -37,15 +38,27 @@ class PeopleViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        userListener?.remove()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .orange
         setupSearchBar()
         setupCollectionView()
         createDataSource()
-        reloadData(with: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
+        
+        userListener = ListenerService.shared.usersObserve(users: users, completion: { (result) in
+            switch result {
+            case .success(let users):
+                self.users = users
+                self.reloadData(with: nil)
+            case .failure(let error):
+                self.showAlert(with: "Error@", and: error.localizedDescription)
+            }
+        })
     }
     
     @objc private func signOut() {
@@ -67,9 +80,7 @@ class PeopleViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite
         view.addSubview(collectionView)
-        
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseID)
-        
         collectionView.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseId)
     }
     
@@ -177,6 +188,13 @@ extension PeopleViewController {
 extension PeopleViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         reloadData(with: searchText)
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension PeopleViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
 
