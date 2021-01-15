@@ -62,7 +62,6 @@ class FirestoreService {
                           id: id)
         StorageService.shared.upload(photo: avatarImage!) { (result) in
             switch result {
-            
             case .success(let url):
                 muser.avatarStringURL = url.absoluteString
                 self.usersRef.document(muser.id).setData(muser.representation) { (error) in
@@ -117,7 +116,6 @@ class FirestoreService {
         
         getWaitingChatMessages(chat: chat) { (result) in
             switch result {
-            
             case .success(let messages):
                 for message in messages {
                     guard let documentId = message.id else { return }
