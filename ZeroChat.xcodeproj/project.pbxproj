@@ -37,6 +37,7 @@
 		778A5FE125AA26A300F6DAFC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5FE025AA26A300F6DAFC /* ProfileViewController.swift */; };
 		77A5D65725AC4D590017ED8A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A5D65625AC4D590017ED8A /* AuthService.swift */; };
 		77BE685125B1B4570089E5A1 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BE685025B1B4570089E5A1 /* UIScrollView+Extension.swift */; };
+		77BE685425B1CCFB0089E5A1 /* GitImg in Resources */ = {isa = PBXBuildFile; fileRef = 77BE685325B1CCFB0089E5A1 /* GitImg */; };
 		77C310CA25AC72B4008ECDA5 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310C925AC72B4008ECDA5 /* Validators.swift */; };
 		77C310CD25AC74C9008ECDA5 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310CC25AC74C9008ECDA5 /* AuthError.swift */; };
 		77C310D825ACAA55008ECDA5 /* AuthNavigationDelegate+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C310D725ACAA55008ECDA5 /* AuthNavigationDelegate+Protocol.swift */; };
@@ -93,6 +94,7 @@
 		778A5FE025AA26A300F6DAFC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		77A5D65625AC4D590017ED8A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		77BE685025B1B4570089E5A1 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		77BE685325B1CCFB0089E5A1 /* GitImg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GitImg; sourceTree = "<group>"; };
 		77C310C925AC72B4008ECDA5 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		77C310CC25AC74C9008ECDA5 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		77C310D725ACAA55008ECDA5 /* AuthNavigationDelegate+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthNavigationDelegate+Protocol.swift"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		7722C75025A8C21000CEA30C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				77BE685325B1CCFB0089E5A1 /* GitImg */,
 				771B029825A46D60008B8DCC /* Assets.xcassets */,
 				771B029A25A46D60008B8DCC /* LaunchScreen.storyboard */,
 			);
@@ -398,6 +401,7 @@
 				771B029C25A46D60008B8DCC /* LaunchScreen.storyboard in Resources */,
 				771B029925A46D60008B8DCC /* Assets.xcassets in Resources */,
 				77C4667425AB5B4100C9A0B3 /* GoogleService-Info.plist in Resources */,
+				77BE685425B1CCFB0089E5A1 /* GitImg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
