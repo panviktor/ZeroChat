@@ -10,7 +10,6 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ListenerService {
-    
     static let shared = ListenerService()
     
     private let db = Firestore.firestore()
@@ -48,7 +47,7 @@ class ListenerService {
             completion(.success(users))
         }
         return usersListener
-    } // usersObserve
+    }
     
     func waitingChatsObserve(chats: [MChat], completion: @escaping (Result<[MChat], Error>) -> Void) -> ListenerRegistration? {
         var chats = chats
@@ -73,10 +72,8 @@ class ListenerService {
                     chats.remove(at: index)
                 }
             }
-            
             completion(.success(chats))
         }
-        
         return chatsListener
     }
     
@@ -103,10 +100,8 @@ class ListenerService {
                     chats.remove(at: index)
                 }
             }
-            
             completion(.success(chats))
         }
-        
         return chatsListener
     }
     
