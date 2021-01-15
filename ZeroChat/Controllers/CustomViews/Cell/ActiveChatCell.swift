@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     static var reuseId: String = "ActiveChatCell"
@@ -13,7 +14,7 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     let friendImageView = UIImageView()
     let friendName = UILabel(text: "User name", font: .laoSangamMN20())
     let lastMessage = UILabel(text: "How are you?", font: .laoSangamMN18())
-    let gradientView = GradientView(from: .topTrailing, to: .bottomLeading, startColor: #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), endColor: #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
+    let gradientView = GradientView(from: .topTrailing, to: .bottomLeading, startColor: #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1), endColor: #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,9 +27,9 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     
     func configure<U>(with value: U) where U : Hashable {
         guard let chat: MChat = value as? MChat else { return }
-//        friendImageView.image = UIImage(named: chat.userImageString)
-//        friendName.text = chat.username
-//        lastMessage.text = chat.lastMessage
+        friendName.text = chat.friendUsername
+        lastMessage.text = chat.lastMessageContent
+        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarStringURL), completed: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -80,8 +81,6 @@ extension ActiveChatCell {
         
     }
 }
-
-
 // MARK: - SwiftUI
 import SwiftUI
 

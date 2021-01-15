@@ -10,6 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ListenerService {
+    
     static let shared = ListenerService()
     
     private let db = Firestore.firestore()
@@ -21,8 +22,6 @@ class ListenerService {
     private var currentUserId: String {
         return Auth.auth().currentUser!.uid
     }
-    
-    private init() {}
     
     func usersObserve(users: [MUser], completion: @escaping (Result<[MUser], Error>) -> Void) -> ListenerRegistration? {
         var users = users
@@ -49,7 +48,7 @@ class ListenerService {
             completion(.success(users))
         }
         return usersListener
-    }
+    } // usersObserve
     
     func waitingChatsObserve(chats: [MChat], completion: @escaping (Result<[MChat], Error>) -> Void) -> ListenerRegistration? {
         var chats = chats
@@ -89,7 +88,7 @@ class ListenerService {
                 completion(.failure(error!))
                 return
             }
-
+            
             snapshot.documentChanges.forEach { (diff) in
                 guard let chat = MChat(document: diff.document) else { return }
                 switch diff.type {
@@ -104,13 +103,13 @@ class ListenerService {
                     chats.remove(at: index)
                 }
             }
-
+            
             completion(.success(chats))
         }
-
+        
         return chatsListener
     }
-
+    
     func messagesObserve(chat: MChat, completion: @escaping (Result<MMessage, Error>) -> Void) -> ListenerRegistration? {
         let ref = usersRef.document(currentUserId).collection("activeChats").document(chat.friendId).collection("messages")
         let messagesListener = ref.addSnapshotListener { (querySnapshot, error) in
@@ -118,7 +117,7 @@ class ListenerService {
                 completion(.failure(error!))
                 return
             }
-
+            
             snapshot.documentChanges.forEach { (diff) in
                 guard let message = MMessage(document: diff.document) else { return }
                 switch diff.type {
@@ -134,4 +133,3 @@ class ListenerService {
         return messagesListener
     }
 }
-

@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ChatRequestViewController: UIViewController {
     let containerView = UIView()
     let imageView = UIImageView(image: #imageLiteral(resourceName: "human2"), contentMode: .scaleAspectFill)

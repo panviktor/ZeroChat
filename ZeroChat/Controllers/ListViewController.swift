@@ -18,7 +18,6 @@ class ListViewController: UIViewController {
     
     enum Section: Int, CaseIterable {
         case  waitingChats, activeChats
-        
         func description() -> String {
             switch self {
             case .waitingChats:
@@ -62,6 +61,7 @@ class ListViewController: UIViewController {
             case .success(let chats):
                 if self.waitingChats != [], self.waitingChats.count <= chats.count {
                     let chatRequestVC = ChatRequestViewController(chat: chats.last!)
+                    chatRequestVC.delegate = self
                     self.present(chatRequestVC, animated: true, completion: nil)
                 }
                 self.waitingChats = chats
@@ -121,7 +121,6 @@ class ListViewController: UIViewController {
 
 // MARK: - Data Source
 extension ListViewController {
-    
     private func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, MChat>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, chat) -> UICollectionViewCell? in
             guard let section = Section(rawValue: indexPath.section) else {
@@ -233,8 +232,8 @@ extension ListViewController: UICollectionViewDelegate {
             self.present(chatRequestVC, animated: true, completion: nil)
         case .activeChats:
             print(indexPath)
-//                    let chatsVC = ChatsViewController(user: currentUser, chat: chat)
-//                    navigationController?.pushViewController(chatsVC, animated: true)
+            let chatsVC = ChatsViewController(user: currentUser, chat: chat)
+            navigationController?.pushViewController(chatsVC, animated: true)
         }
     }
 }
@@ -272,10 +271,8 @@ extension ListViewController: UISearchBarDelegate {
     }
 }
 
-
 // MARK: - SwiftUI
 import SwiftUI
-
 struct ListVCProvider: PreviewProvider {
     static var previews: some View {
         ContainerView().edgesIgnoringSafeArea(.all)

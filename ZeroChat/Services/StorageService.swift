@@ -11,11 +11,10 @@ import FirebaseStorage
 
 class StorageService {
     static let shared = StorageService()
-    private init() {}
     
     let storageRef = Storage.storage().reference()
     
-    private var avatarRef: StorageReference {
+    private var avatarsRef: StorageReference {
         return storageRef.child("avatars")
     }
     
@@ -25,15 +24,17 @@ class StorageService {
     
     func upload(photo: UIImage, completion: @escaping (Result<URL, Error>) -> Void) {
         guard let scaledImage = photo.scaledToSafeUploadSize, let imageData = scaledImage.jpegData(compressionQuality: 0.4) else { return }
+        
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
-        avatarRef.child(currentUserId).putData(imageData, metadata: metadata) { (metadata, error) in
+        
+        avatarsRef.child(currentUserId).putData(imageData, metadata: metadata) { (metadata, error) in
             guard let _ = metadata else {
                 completion(.failure(error!))
                 return
             }
-            self.avatarRef.child(self.currentUserId).downloadURL { (url, error) in
-                guard let downloadURL = url else  {
+            self.avatarsRef.child(self.currentUserId).downloadURL { (url, error) in
+                guard let downloadURL = url else {
                     completion(.failure(error!))
                     return
                 }

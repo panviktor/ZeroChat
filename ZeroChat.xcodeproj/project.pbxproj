@@ -29,6 +29,7 @@
 		774969D025B05C9300233DD9 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774969CF25B05C9300233DD9 /* ListenerService.swift */; };
 		774969D325B08A0300233DD9 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774969D225B08A0300233DD9 /* MMessage.swift */; };
 		77496A0F25B0CD7F00233DD9 /* WaitingChatsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77496A0E25B0CD7F00233DD9 /* WaitingChatsNavigation.swift */; };
+		77496A1225B18A3300233DD9 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77496A1125B18A3300233DD9 /* ChatsViewController.swift */; };
 		776E777825A9AC480047C971 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E777725A9AC480047C971 /* WaitingChatCell.swift */; };
 		778A5FC925A9BA1A00F6DAFC /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A5FC825A9BA1A00F6DAFC /* SectionHeader.swift */; };
 		778A5FCC25A9CF1400F6DAFC /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 778A5FCB25A9CF1400F6DAFC /* users.json */; };
@@ -86,6 +87,7 @@
 		774969CF25B05C9300233DD9 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		774969D225B08A0300233DD9 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		77496A0E25B0CD7F00233DD9 /* WaitingChatsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigation.swift; sourceTree = "<group>"; };
+		77496A1125B18A3300233DD9 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		776E777725A9AC480047C971 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		778A5FC825A9BA1A00F6DAFC /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		778A5FCB25A9CF1400F6DAFC /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				7722C73725A8580700CEA30C /* ListViewController.swift */,
 				778A5FE025AA26A300F6DAFC /* ProfileViewController.swift */,
 				77C4666F25AB4E3A00C9A0B3 /* ChatRequestViewController.swift */,
+				77496A1125B18A3300233DD9 /* ChatsViewController.swift */,
 				77E73EB225A5D67B00B64729 /* CustomViews */,
 			);
 			path = Controllers;
@@ -509,6 +512,7 @@
 				77C310E625ACB085008ECDA5 /* UserError.swift in Sources */,
 				77E73EA625A5C53E00B64729 /* ButtonFormView.swift in Sources */,
 				7722C74725A8C0F200CEA30C /* Bundle+Extension.swift in Sources */,
+				77496A1225B18A3300233DD9 /* ChatsViewController.swift in Sources */,
 				77E73EBC25A61D6200B64729 /* AddPhotoView.swift in Sources */,
 				774969CA25B0485A00233DD9 /* StorageService.swift in Sources */,
 				77E73E9225A48BE000B64729 /* UIButton+Extension.swift in Sources */,

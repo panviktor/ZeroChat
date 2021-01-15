@@ -84,3 +84,4 @@ struct MUser: Hashable, Decodable {
         return username.lowercased().contains(lowercasedFilter)
     }
 }
+

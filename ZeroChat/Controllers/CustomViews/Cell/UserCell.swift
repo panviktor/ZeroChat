@@ -11,9 +11,8 @@ import SDWebImage
 class UserCell: UICollectionViewCell, SelfConfiguringCell {
     
     let userImageView = UIImageView()
-    let userName = UILabel(text: "Viktor", font: .laoSangamMN20())
+    let userName = UILabel(text: "Alexey", font: .laoSangamMN20())
     let containerView = UIView()
-    
     
     static var reuseId: String = "UserCell"
     
@@ -31,10 +30,6 @@ class UserCell: UICollectionViewCell, SelfConfiguringCell {
         self.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.containerView.layer.cornerRadius = 4
@@ -42,7 +37,7 @@ class UserCell: UICollectionViewCell, SelfConfiguringCell {
     }
     
     override func prepareForReuse() {
-        userImageView.image = nil 
+        userImageView.image = nil
     }
     
     func configure<U>(with value: U) where U : Hashable {
@@ -83,4 +78,9 @@ class UserCell: UICollectionViewCell, SelfConfiguringCell {
             userName.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
         ])
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

@@ -25,9 +25,11 @@ class FirestoreService {
         return db.collection(["users", currentUser.id, "activeChats"].joined(separator: "/"))
     }
     
-    var currentUser: MUser!
-    
-    private init() {}
+    var currentUser: MUser! {
+        didSet {
+            print(#line, currentUser)
+        }
+    }
     
     func getUserData(user: User, completion: @escaping (Result<MUser, Error>) -> Void) {
         let docRef = usersRef.document(user.uid)
@@ -77,8 +79,8 @@ class FirestoreService {
             case .failure(let error):
                 completion(.failure(error))
             }
-        }
-    }
+        } // StorageService
+    } // saveProfileWith
     
     func createWaitingChat(message: String, receiver: MUser, completion: @escaping (Result<Void, Error>) -> Void) {
         let reference = db.collection(["users", receiver.id, "waitingChats"].joined(separator: "/"))
